@@ -10,7 +10,9 @@ import {
 const s = StyleSheet.create({
   baseInputStyle: {
     color: "black",
+    flex: 1
   },
+  
 });
 
 export default class CCInput extends Component {
