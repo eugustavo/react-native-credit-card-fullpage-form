@@ -1,38 +1,38 @@
-# React Native Credit Card Input
-Easy (and good looking) credit-card input for your React Native Project 💳 💳
+# Credit Card Input form
+A Component to add credit card input to your react native application. For Android & iOS.
 
-*Forked from the original project in order to improve usability* since users often recognize the have input a wrong card number only after typing the name, to have an horizontal form extending outside the view seems to be appealing but it's useless to come back. The only way to go on the first field (card number) in the original project was to click one by one all previous fields in order to restore the scroll axis (this could have been fixed with a scrollable=true property). Furthermore it's pretty unusual to have x-axis forms on a mobile ux and users do prefer fields that are always visible. It has also been implemented a new style form following the iOS10 design (TODO android).
-
-<p align="center">
-<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-ios.gif?raw=true" width=200/>
-<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-ios-lite.gif?raw=true" width=200/>
-<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-android.gif?raw=true" width=200/>
-<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-android-lite.gif?raw=true" width=200/>
-</p>
+*Forked from the original project in order to improve usability* since users often recognize the have input a wrong card number only after typing the name, to have an horizontal form extending outside the view seems to be appealing but it's useless to come back. The only way to go on the first field (card number) in the original project was to click one by one all previous fields in order to restore the scroll axis (this could have been fixed with a scrollable=true property). Furthermore it's pretty unusual to have x-axis forms on a mobile ux and users do prefer fields that are always visible. It has also been implemented a new style form following the iOS10 design.
 
 Code:
 
 ```js
+// fullpage with credit card flipcard
 <CreditCardInput onChange={this._onChange} />
-// or
-<LiteCreditCardInput onChange={this._onChange} />
+// single-line with horizontal scrolling
+<LiteCreditCardInput onChange={this._onChange} /> 
 ```
 
+<p align="center">
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/example.gitf?raw=true" width=200/>
+</p>
 
 # Features
 * [iOS 10 form design](https://github.com/lexor90/react-native-credit-card-input/blob/master/form.png?raw=true)
-* Skeuomorphic credit-card 💳 (inspired by: [card](https://jessepollak.github.io/card/), [react-native-credit-card](https://github.com/sonnylazuardi/react-native-credit-card))
-* **!!NEW!!** Now you could scale the Credit Card for smaller screens
-* Lite version for smaller screens (or if skeuomorphic is not really your thing)
-* Credit-card input validations & formatting while you're typing
-* Form is fully navigatable using keypad
-* Works on both Android and iOS
+* Customizable credit card that flips as you type to show credit card fields (inspired by: [card](https://jessepollak.github.io/card/), [react-native-credit-card](https://github.com/sonnylazuardi/react-native-credit-card))
+* Scalable credit card
+* Lite version for smaller screens
+* Credit-card input validations & formatting as you type
+* Integrated with [card-validator](https://github.com/braintree/card-validator) by braintree to display credit card type
+* Auto-focus next field as you complete correctly one
+* iOS native form design (customizable if you want to)
 
+# TODO
+* Add Android form design
 
 # Usage
 
 ```bash
-npm i --save react-native-credit-card-input
+npm i --save react-native-credit-card-input-fullpage
 ```
 
 then add these lines in your react-native codebase
@@ -161,12 +161,6 @@ react-native run-android
 # Future Improvement
 * Add unit tests
 * Create example with [react-native-awesome-card-io](https://github.com/Kerumen/react-native-awesome-card-io)
-
-# Breaking Changes from 0.2.*
-* `cardViewSize` prop are removed from `CreditCardInput`, use `cardScale` instead (because changing the size will break most of the texts)
-* `bgColor` prop are removed from `CreditCardInput`, ask your designer friend to make a credit card image instead (or use the prebundled image)
-* `imageFront` and `imageBack` props are renamed to `cardImageFront` and `cardImageBack` respectively,
-* Android `monospace` fonts doesn't looks as nice as iOS `Courier`, bundle custom fonts into your app and override the default using `cardFontFamily` instead
 
 # Production App using react-native-credit-card-input
 * Grain.com.sg ([iOS](https://grain.com.sg/mobile/ios/download), [Android](https://grain.com.sg/mobile/android/download)) – Gourmet food delivery in Singapore
