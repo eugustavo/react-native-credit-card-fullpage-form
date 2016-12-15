@@ -20,7 +20,7 @@ Code:
 
 
 # Features
-* (iOS 10 form design)[https://github.com/lexor90/react-native-credit-card-input/blob/master/form.png?raw=true]
+* [iOS 10 form design](https://github.com/lexor90/react-native-credit-card-input/blob/master/form.png?raw=true)
 * Skeuomorphic credit-card 💳 (inspired by: [card](https://jessepollak.github.io/card/), [react-native-credit-card](https://github.com/sonnylazuardi/react-native-credit-card))
 * **!!NEW!!** Now you could scale the Credit Card for smaller screens
 * Lite version for smaller screens (or if skeuomorphic is not really your thing)
