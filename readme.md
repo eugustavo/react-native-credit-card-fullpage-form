@@ -12,8 +12,8 @@ Code:
 <LiteCreditCardInput onChange={this._onChange} /> 
 ```
 
-<p align="center">
-<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/example.gitf?raw=true" width=200/>
+<p align="left">
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/example.gif?raw=true" width=200/>
 </p>
 
 # Features
