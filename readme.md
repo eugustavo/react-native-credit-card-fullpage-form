@@ -1,12 +1,13 @@
-
 # React Native Credit Card Input
 Easy (and good looking) credit-card input for your React Native Project 💳 💳
 
+*Forked from the original project in order to improve usability* since users often recognize the have input a wrong card number only after typing the name, to have an horizontal form extending outside the view seems to be appealing but it's useless to come back. The only way to go on the first field (card number) in the original project was to click one by one all previous fields in order to restore the scroll axis (this could have been fixed with a scrollable=true property). Furthermore it's pretty unusual to have x-axis forms on a mobile ux and users do prefer fields that are always visible. It has also been implemented a new style form following the iOS10 design (TODO android).
+
 <p align="center">
-<img src="https://github.com/sbycrosz/react-native-credit-card-input/blob/master/preview-ios.gif?raw=true" width=200/>
-<img src="https://github.com/sbycrosz/react-native-credit-card-input/blob/master/preview-ios-lite.gif?raw=true" width=200/>
-<img src="https://github.com/sbycrosz/react-native-credit-card-input/blob/master/preview-android.gif?raw=true" width=200/>
-<img src="https://github.com/sbycrosz/react-native-credit-card-input/blob/master/preview-android-lite.gif?raw=true" width=200/>
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-ios.gif?raw=true" width=200/>
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-ios-lite.gif?raw=true" width=200/>
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-android.gif?raw=true" width=200/>
+<img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/preview-android-lite.gif?raw=true" width=200/>
 </p>
 
 Code:
@@ -19,6 +20,7 @@ Code:
 
 
 # Features
+* (iOS 10 form design)[https://github.com/lexor90/react-native-credit-card-input/blob/master/form.png?raw=true]
 * Skeuomorphic credit-card 💳 (inspired by: [card](https://jessepollak.github.io/card/), [react-native-credit-card](https://github.com/sonnylazuardi/react-native-credit-card))
 * **!!NEW!!** Now you could scale the Credit Card for smaller screens
 * Lite version for smaller screens (or if skeuomorphic is not really your thing)
