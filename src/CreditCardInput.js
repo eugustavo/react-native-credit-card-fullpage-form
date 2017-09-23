@@ -23,14 +23,11 @@ const s = StyleSheet.create({
   inputContainer: {
   },
   inputLabel: {
-    fontSize: 34/2,
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: 'center',
-    lineHeight: 40
+    padding: 10,
+    fontSize: 18,
+    fontWeight: "bold",
   },
   input: {
-    height: 40,
     paddingLeft: 10,
     paddingRight: 10,
   },
