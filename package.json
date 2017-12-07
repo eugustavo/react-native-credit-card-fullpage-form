@@ -1,6 +1,6 @@
 {
   "name": "react-native-credit-card-input-fullpage",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React native credit card input component",
   "main": "index.js",
   "scripts": {
@@ -29,9 +29,9 @@
   "author": "sbycrosz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sbycrosz/react-native-credit-card-input/issues"
+    "url": "https://github.com/lexor90/react-native-credit-card-input/issues"
   },
-  "homepage": "https://github.com/sbycrosz/react-native-credit-card-input#readme",
+  "homepage": "https://github.com/lexor90/react-native-credit-card-input#readme",
   "dependencies": {
     "card-validator": "^2.2.0",
     "react-native-flip-card": "^3.3.0",
