@@ -158,9 +158,8 @@ react-native run-android
 * Send a pull request :D
 * Make sure `npm run lint` passed
 
-# Future Improvement
-* Add unit tests
-* Create example with [react-native-awesome-card-io](https://github.com/Kerumen/react-native-awesome-card-io)
+## Contributors
 
-# Production App using react-native-credit-card-input
-* Grain.com.sg ([iOS](https://grain.com.sg/mobile/ios/download), [Android](https://grain.com.sg/mobile/android/download)) – Gourmet food delivery in Singapore
+* `Sam Aryasa` ([@sbycrosz](https://github.com/sbycrosz))
+* `Alessandro Agosto` ([@lexor90](https://github.com/lexor90))
+* `Al` ([@mobiusnz](https://github.com/mobiusnz))
