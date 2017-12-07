@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from "react";
+import PropTypes from 'prop-types';
+import React, { Component } from "react";
 import ReactNative, {
   NativeModules,
   View,
@@ -6,6 +7,7 @@ import ReactNative, {
   StyleSheet,
   ScrollView,
   Dimensions,
+  ViewPropTypes,
 } from "react-native";
 
 import CreditCard from "./CardView";
@@ -22,14 +24,11 @@ const s = StyleSheet.create({
   inputContainer: {
   },
   inputLabel: {
-    fontSize: 34/2,
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: 'center',
-    lineHeight: 40
+    padding: 10,
+    fontSize: 18,
+    fontWeight: "bold",
   },
   input: {
-    height: 40,
     paddingLeft: 10,
     paddingRight: 10,
   },
@@ -52,7 +51,7 @@ export default class CreditCardInput extends Component {
 
     labelStyle: Text.propTypes.style,
     inputStyle: Text.propTypes.style,
-    inputContainerStyle: View.propTypes.style,
+    inputContainerStyle: ViewPropTypes.style,
 
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,
@@ -128,7 +127,7 @@ export default class CreditCardInput extends Component {
             cvc={cvc} />
         <ScrollView ref="Form"
             horizontal={false}
-            keyboardShouldPersistTaps
+            keyboardShouldPersistTaps="always"
             scrollEnabled={false}
             showsHorizontalScrollIndicator={false}
             style={s.form}>
