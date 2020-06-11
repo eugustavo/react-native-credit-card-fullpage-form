@@ -1,7 +1,7 @@
 {
-  "name": "react-native-credit-card-input-fullpage",
-  "version": "0.2.0",
-  "description": "React native credit card input component",
+  "name": "react-native-credit-card-fullpage-form",
+  "version": "1.0",
+  "description": "React Native Credit Card Fullpage Form component",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lexor90/react-native-credit-card-input.git"
+    "url": "git+https://github.com/eugustavo/react-native-credit-card-fullpage-form.git"
   },
   "keywords": [
     "react-native",
@@ -17,21 +17,19 @@
     "android",
     "credit-card",
     "credit-card input",
-    "skeuomorphic credit-card",
-    "form",
+    "credit-card",
+    "credit-card-form",
     "flip",
     "card",
-    "input",
-    "component",
-    "react-component",
-    "react-native-component"
+    "react-component-credit-card",
+    "react-native-credit-card-component"
   ],
-  "author": "sbycrosz",
+  "author": "eugustavo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lexor90/react-native-credit-card-input/issues"
+    "url": "https://github.com/eugustavo/react-native-credit-card-fullpage-form/issues"
   },
-  "homepage": "https://github.com/lexor90/react-native-credit-card-input#readme",
+  "homepage": "https://github.com/eugustavo/react-native-credit-card-fullpage-form#readme",
   "dependencies": {
     "card-validator": "^2.2.0",
     "react-native-flip-card": "^3.3.0",

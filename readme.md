@@ -1,7 +1,9 @@
-# Credit Card Input form
-A Component to add credit card input to your react native application. For Android & iOS.
+# Credit Card Fullpage Form
+A Component to add credit card form to your react native application. For **Android** & **iOS**.
 
-*Forked from the original project in order to improve usability* since users often recognize the have input a wrong card number only after typing the name, to have an horizontal form extending outside the view seems to be appealing but it's useless to come back. The only way to go on the first field (card number) in the original project was to click one by one all previous fields in order to restore the scroll axis (this could have been fixed with a scrollable=true property). Furthermore it's pretty unusual to have x-axis forms on a mobile ux and users do prefer fields that are always visible. It has also been implemented a new style form following the iOS10 design.
+> *Bifurcated from the original design for error correction* 
+
+Original project: https://github.com/lexor90/react-native-credit-card-input
 
 Code:
 
@@ -11,10 +13,16 @@ Code:
 // single-line with horizontal scrolling
 <LiteCreditCardInput onChange={this._onChange} /> 
 ```
-
+<h3> Complete Form </h3>
 <p align="left">
 <img src="https://github.com/lexor90/react-native-credit-card-input/blob/master/example.gif?raw=true" width=200/>
 </p>
+
+<h3> Lite Form </h3>
+<p align="left">
+<img src="example-lite.gif" width=200/>
+</p>
+
 
 # Features
 * [iOS 10 form design](https://github.com/lexor90/react-native-credit-card-input/blob/master/form.png?raw=true)
@@ -26,13 +34,11 @@ Code:
 * Auto-focus next field as you complete correctly one
 * iOS native form design (customizable if you want to)
 
-# TODO
-* Add Android form design
-
 # Usage
 
 ```bash
-npm i --save react-native-credit-card-input-fullpage
+npm install react-native-credit-card-fullpage-form
+yarn add react-native-credit-card-fullpage-form
 ```
 
 then add these lines in your react-native codebase
@@ -44,15 +50,12 @@ import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-i
 // or
 <LiteCreditCardInput onChange={this._onChange} />
 
-// Note: You'll need to enable LayoutAnimation on android to see LiteCreditCardInput's animations
-// UIManager.setLayoutAnimationEnabledExperimental(true);
-
 ```
 
 And then on your onChange handler:
 
 ```js
-_onChange => form => console.log(form);
+onChange => form => console.log(form);
 
 // will print:
 {
@@ -133,7 +136,7 @@ Set values into credit card form
 **Known issues:** clearing a field e.g. `setValues({ expiry: "" })` will trigger the logic to `move to previous field` and trigger other kind of weird side effects. **PR plz**
 
 
-## focus
+## Focus
 focus on to specified field
 
 ```js
@@ -141,25 +144,7 @@ focus on to specified field
 	this.refs.CCInput.focus("expiry");
 ```
 
-# Example
-
-In the `example` directory, run:
-
-```bash
-npm install
-
-react-native run-ios
-# or
-react-native run-android
-```
 
 # Missing Something? Something is not working?
-* Open a GitHub issue, or
-* Send a pull request :D
-* Make sure `npm run lint` passed
-
-## Contributors
-
-* `Sam Aryasa` ([@sbycrosz](https://github.com/sbycrosz))
-* `Alessandro Agosto` ([@lexor90](https://github.com/lexor90))
-* `Al` ([@mobiusnz](https://github.com/mobiusnz))
+* Open a GitHub issue,
+* Send a pull request,
