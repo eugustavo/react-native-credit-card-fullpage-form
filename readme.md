@@ -84,24 +84,27 @@ onChange => form => console.log(form);
 # Props
 
 ## LiteCreditCardInput
+
 | Property | Type | Description |
-| --- | --- | --- | --- |
-|autoFocus | PropTypes.bool | Automatically focus Card Number field on render|
-|onChange | PropTypes.func | Receives a `formData` object every time the form changes |
-|onFocus | PropTypes.func | Receives the name of currently focused field |
-|placeholders | PropTypes.object | Defaults to <br/>`{ number: "1234 5678 1234 5678", expiry: "MM/YY", cvc: "CVC" }` |
-|inputStyle | Text.propTypes.style | Style for credit-card form's textInput |
-|validColor | PropTypes.string | Color that will be applied for valid text input. Defaults to: "{inputStyle.color}" |
-|invalidColor | PropTypes.string | Color that will be applied for invalid text input. Defaults to: "red" |
+| -------- | -------- | -------- |
+|autoFocus     | PropTypes.bool | Automatically focus Card Number field on render|
+|onChange      | PropTypes.func | Receives a `formData` object every time the form changes |
+|onFocus       | PropTypes.func | Receives the name of currently focused field |
+|placeholders  | PropTypes.object | Defaults to <br/>`{ number: "1234 5678 1234 5678", expiry: "MM/YY", cvc: "CVC" }`  |
+|inputStyle    | Text.propTypes.style | Style for credit-card form's textInput |
+|validColor    | PropTypes.string | Color that will be applied for valid text input. Defaults to: "{inputStyle.color}" |
+|invalidColor  | PropTypes.string | Color that will be applied for invalid text input. Defaults to: "red" |
 |placeholderColor | PropTypes.string | Color that will be applied for text input placeholder. Defaults to: "gray" |
+
 
 #### NOTES
 LiteCreditCardInput does not support `requiresName`, `requiresCVC`, and `requiresPostalCode` at the moment, PRs are welcome :party:
 
 
 ## CreditCardInput
+
 | Property | Type | Description |
-| --- | --- | --- | --- |
+| -------- | -------- | -------- |
 |autoFocus | PropTypes.bool | Automatically focus Card Number field on render|
 |onChange | PropTypes.func | Receives a `formData` object every time the form changes |
 |onFocus | PropTypes.func | Receives the name of currently focused field |
