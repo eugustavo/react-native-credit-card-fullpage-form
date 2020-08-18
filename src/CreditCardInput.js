@@ -48,6 +48,7 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
     ...InjectedProps,
     labels: PropTypes.object,
     placeholders: PropTypes.object,
+    placeholderColors: PropTypes.object,
 
     labelStyle: Text.propTypes.style,
     labelStyles: PropTypes.object,
@@ -114,7 +115,7 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
       labelStyle: [s.inputLabel, labelStyle, labelStyles[field]],
       validColor,
       invalidColor,
-      placeholderColor,
+      placeholderColor: placeholderColors[field] || placeholderColor,
       ref: field,
       field,
 
@@ -168,39 +169,23 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
           style={s.form}>
           <CCInput
             {...this._inputProps('number')}
-            containerStyle={[
-              s.inputContainer,
-              inputContainerStyle,
-              inputContainerStyles.number,
-            ]}
+            containerStyle={[s.inputContainer, inputContainerStyle, inputContainerStyles.number]}
           />
           <CCInput
             {...this._inputProps('expiry')}
-            containerStyle={[
-              s.inputContainer,
-              inputContainerStyle,
-              inputContainerStyles.expiry,
-            ]}
+            containerStyle={[s.inputContainer, inputContainerStyle, inputContainerStyles.expiry]}
           />
           {requiresCVC && (
             <CCInput
               {...this._inputProps('cvc')}
-              containerStyle={[
-                s.inputContainer,
-                inputContainerStyle,
-                inputContainerStyles.cvc,
-              ]}
+              containerStyle={[s.inputContainer, inputContainerStyle, inputContainerStyles.cvc]}
             />
           )}
           {requiresName && (
             <CCInput
               {...this._inputProps('name')}
               keyboardType="default"
-              containerStyle={[
-                s.inputContainer,
-                inputContainerStyle,
-                inputContainerStyles.name,
-              ]}
+              containerStyle={[s.inputContainer, inputContainerStyle, inputContainerStyles.name]}
             />
           )}
           {requiresPostalCode && (
@@ -224,6 +209,7 @@ CreditCardInput.defaultProps = {
   inputStyles: {},
   labelStyles: {},
   inputContainerStyles: {},
+  placeholderColors: {},
   labels: {
     name: "Cardholder's name",
     number: 'Card Number',
