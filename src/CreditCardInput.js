@@ -50,8 +50,11 @@ export default class CreditCardInput extends Component {
     placeholders: PropTypes.object,
 
     labelStyle: Text.propTypes.style,
+    labelStyles: PropTypes.object,
     inputStyle: Text.propTypes.style,
+    inputStyles: PropTypes.object,
     inputContainerStyle: ViewPropTypes.style,
+    inputContainerStyles: PropTypes.object,
 
     validColor: PropTypes.string,
     invalidColor: PropTypes.string,
@@ -88,11 +91,12 @@ export default class CreditCardInput extends Component {
       inputStyle, labelStyle, validColor, invalidColor, placeholderColor,
       placeholders, labels, values, status,
       onFocus, onChange, onBecomeEmpty, onBecomeValid,
+      inputStyles, labelStyles,
     } = this.props;
 
     return {
-      inputStyle: [s.input, inputStyle],
-      labelStyle: [s.inputLabel, labelStyle],
+      inputStyle: [s.input, inputStyle, inputStyles[field]],
+      labelStyle: [s.inputLabel, labelStyle, labelStyles[field]],
       validColor, invalidColor, placeholderColor,
       ref: field, field,
 
@@ -107,7 +111,8 @@ export default class CreditCardInput extends Component {
 
   render() {
     const {
-      cardImageFront, cardImageBack, inputContainerStyle,
+      cardImageFront, cardImageBack, 
+      inputContainerStyle, inputContainerStyles,
       values: { number, expiry, cvc, name, type }, focused,
       requiresName, requiresCVC, requiresPostalCode,
       cardScale, cardFontFamily
@@ -132,19 +137,19 @@ export default class CreditCardInput extends Component {
             showsHorizontalScrollIndicator={false}
             style={s.form}>
           <CCInput {...this._inputProps("number")}
-              containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderTopWidth: 1, borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} />
+              containerStyle={[s.inputContainer,  { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderTopWidth: 1, borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle, inputContainerStyles.number]} />
           <CCInput {...this._inputProps("expiry")}
-              containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} />
+              containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1, borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle, inputContainerStyles.expiry]} />
           { requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
-                containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} /> }
+                containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle, inputContainerStyles.cvc]} /> }
           { requiresName &&
             <CCInput {...this._inputProps("name")}
                 keyboardType="default"
-                containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} /> }
+                containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle, inputContainerStyles.name]} /> }
           { requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
-                containerStyle={[s.inputContainer, { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle]} /> }
+                containerStyle={[s.inputContainer,  { flex: 1, flexDirection: 'row', justifyContent: 'space-between', borderBottomWidth: 1,borderColor: '#e3e3e3', width: CARD_NUMBER_INPUT_WIDTH }, inputContainerStyle, inputContainerStyles.postalCode]} /> }
         </ScrollView>
       </View>
     );
@@ -153,6 +158,9 @@ export default class CreditCardInput extends Component {
 
 CreditCardInput.defaultProps = {
   cardViewSize: {},
+  inputStyles: {},
+  labelStyles: {},
+  inputContainerStyles: {},
   labels: {
     name: "Cardholder's name",
     number: "Card Number",
