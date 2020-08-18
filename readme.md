@@ -44,7 +44,7 @@ yarn add react-native-credit-card-fullpage-form
 then add these lines in your react-native codebase
 
 ```js
-import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
+import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-fullpage-form";
 
 <CreditCardInput onChange={this._onChange} />
 // or
