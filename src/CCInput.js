@@ -46,12 +46,12 @@ export default class CCInput extends Component {
     onBecomeValid: () => {},
   };
 
-  componentWillReceiveProps = (newProps) => {
+  componentDidUpdate = (prevProps) => {
     const { status, value, onBecomeEmpty, onBecomeValid, field } = this.props;
-    const { status: newStatus, value: newValue } = newProps;
+    const { status: prevStatus, value: prevValue } = prevProps;
 
-    if (value !== '' && newValue === '') onBecomeEmpty(field);
-    if (status !== 'valid' && newStatus === 'valid') onBecomeValid(field);
+    if (prevValue !== '' && value === '') onBecomeEmpty(field);
+    if (prevStatus !== 'valid' && status === 'valid') onBecomeValid(field);
   };
 
   focus = () => this.refs.input.focus();
