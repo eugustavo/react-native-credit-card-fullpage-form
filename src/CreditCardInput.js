@@ -98,6 +98,7 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
       validColor,
       invalidColor,
       placeholderColor,
+      placeholderColors,
       placeholders,
       labels,
       values,
@@ -115,7 +116,9 @@ const POSTAL_CODE_INPUT_WIDTH = 120; // https://github.com/yannickcr/eslint-plug
       labelStyle: [s.inputLabel, labelStyle, labelStyles[field]],
       validColor,
       invalidColor,
-      placeholderColor: placeholderColors[field] || placeholderColor,
+      placeholderColor: placeholderColors[field]
+        ? placeholderColors[field].color
+        : placeholderColor,
       ref: field,
       field,
 
