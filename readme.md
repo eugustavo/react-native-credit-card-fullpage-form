@@ -44,7 +44,7 @@ yarn add react-native-credit-card-fullpage-form
 then add these lines in your react-native codebase
 
 ```js
-import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
+import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-fullpage-form";
 
 <CreditCardInput onChange={this._onChange} />
 // or
@@ -115,8 +115,11 @@ LiteCreditCardInput does not support `requiresName`, `requiresCVC`, and `require
 |cardImageFront | PropTypes.number | Image for the credit-card view `e.g. require("./card.png")` |
 |cardImageFront | PropTypes.number | Image for the credit-card view `e.g. require("./card.png")` |
 |labelStyle | Text.propTypes.style | Style for credit-card form's labels |
+|labelStyles | PropTypes.object | Example: `{ number: { // put your style here }, expiry: {}, cvc: {} }` |
 |inputStyle | Text.propTypes.style | Style for credit-card form's textInput |
+|inputStyles | PropTypes.object | Example: `{ number: { // put your style here }, expiry: {}, cvc: {} }` |
 |inputContainerStyle | View.propTypes.style | Style for textInput's container<br/> Defaults to: `{ borderBottomWidth: 1, borderBottomColor: "black" }` |
+|inputContainerStyles | PropTypes.object | Example: `{ number: { // put your style here }, expiry: {}, cvc: {} }` |
 |validColor | PropTypes.string | Color that will be applied for valid text input. Defaults to: "{inputStyle.color}" |
 |invalidColor | PropTypes.string | Color that will be applied for invalid text input. Defaults to: "red" |
 |placeholderColor | PropTypes.string | Color that will be applied for text input placeholder. Defaults to: "gray" |
